@@ -1,9 +1,11 @@
 import React from 'react';
 import './Expanses.css';
 import ExpanseItem from './ExpanseItem';
+import Card from './Card';
+
 const Expanses = ({ data }) => {
   return (
-    <div className='expenses'>
+    <Card className='expenses'>
       {data.map((item) => {
         return (
           <ExpanseItem
@@ -14,7 +16,7 @@ const Expanses = ({ data }) => {
           />
         );
       })}
-    </div>
+    </Card>
   );
 };
 
