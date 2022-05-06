@@ -1,5 +1,5 @@
 import Expanses from './components/Expenses/Expanses';
-
+import NewExpense from './components/NewExpense/NewExpense';
 function App() {
   const expenses = [
     {
@@ -24,6 +24,7 @@ function App() {
   ];
   return (
     <div className='App'>
+      <NewExpense data={expenses} />
       <Expanses data={expenses} />
     </div>
   );
