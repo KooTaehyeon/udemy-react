@@ -1,8 +1,7 @@
 import React from 'react';
-import './Expanses.css';
 import ExpanseItem from './ExpanseItem';
-import Card from './Card';
-
+import Card from '../UI/Card';
+import './Expanses.css';
 const Expanses = ({ data }) => {
   return (
     <Card className='expenses'>
