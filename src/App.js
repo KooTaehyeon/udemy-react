@@ -24,7 +24,7 @@ function App() {
   ];
   return (
     <div className='App'>
-      <NewExpense data={expenses} />
+      <NewExpense />
       <Expanses data={expenses} />
     </div>
   );
