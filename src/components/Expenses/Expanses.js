@@ -3,6 +3,7 @@ import ExpanseItem from './ExpanseItem';
 import Card from '../UI/Card';
 import './Expanses.css';
 import ExpenseFilter from './ExpenseFilter';
+import ExpensesList from './ExpensesList';
 const Expanses = (props) => {
   const [filteredYear, setFilteredYear] = useState('2020');
   const filterChangeHandler = (selectedYear) => {
@@ -12,6 +13,7 @@ const Expanses = (props) => {
     return expense.date.getFullYear().toString() === filteredYear;
   });
   console.log(filteredExpenses);
+
   return (
     <>
       <Card className='expenses'>
@@ -19,16 +21,7 @@ const Expanses = (props) => {
           selected={filteredYear}
           onChangeFilter={filterChangeHandler}
         />
-        {filteredExpenses.map((item) => {
-          return (
-            <ExpanseItem
-              key={item.id}
-              title={item.title}
-              amount={item.amount}
-              date={item.date}
-            />
-          );
-        })}
+        <ExpensesList data={filteredExpenses} />
       </Card>
     </>
   );
